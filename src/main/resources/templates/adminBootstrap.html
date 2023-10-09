@@ -13,9 +13,8 @@
         <!-- A fluid container that uses the full witdh -->
         <a class="navbar-brand">
             <p style="color: aliceblue; position: relative; top: -8px;">
-                <span th:text="${admin.getEmail()}" style="font-weight: bold"></span>
-                <span> with roles: </span>
-                <span th:text="${admin.roleToString()}"></span>
+                <span class="h5" id="emailCurrentUser"></span> with roles:
+                <span id="roleCurrentUser"></span>
             </p>
         </a>
         <form class="form-inline">
@@ -303,15 +302,7 @@
                                         <th>Role</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td th:text="${admin.getId()}"></td>
-                                        <td th:text="${admin.getUsername()}"></td>
-                                        <td th:text="${admin.getLastName()}"></td>
-                                        <td th:text="${admin.getAge()}"></td>
-                                        <td th:text="${admin.getEmail()}"></td>
-                                        <td th:text="${admin.roleToString()}"></td>
-                                    </tr>
+                                    <tbody id="oneUser">
                                     </tbody>
                                 </table>
                             </div>
